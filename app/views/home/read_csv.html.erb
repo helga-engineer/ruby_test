@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="my-4">
+    <small> Upload csv</small>
+  </h1>
+  <div class="row">
+    <div class="col-md-10">
+      <h4>Duplicates: </h4>
+      <hr>
+      <%@dupl.each do |row|%>
+        <p> <%= row[1].compact.join(', ')%> </p>
+      <%end%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-10">
+      <h4>Non-uplicated</h4>
+      <hr>
+      <% @uniq_rows.each do |uniq_row|%>
+      <p> <%= uniq_row[1].compact.join(', ')%> </p>
+      <% end %>
+    </div>
+  </div>
+</div>

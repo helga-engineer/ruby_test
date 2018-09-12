@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="my-4">
+      <!-- <small> Upload csv</small> -->
+    </h1>
+    <div class="row">
+      <div class="col-md-8">
+        <%= form_tag({:action => :read_csv}, multipart: true) do %>
+          <%= file_field_tag :file %>
+          <%= submit_tag( "Import" ) %>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>
